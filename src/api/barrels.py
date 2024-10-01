@@ -50,7 +50,7 @@ def get_wholesale_purchase_plan(wholesale_catalog: list[Barrel]):
             green_potions_num = 0
         purchase_green_barrel = 0
 
-        if green_potions_num < 10 and green_potions_num > 0:
+        if green_potions_num < 10:
             purchase_green_barrel = 1
 
     return [

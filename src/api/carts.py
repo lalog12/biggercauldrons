@@ -82,21 +82,15 @@ def post_visits(visit_id: int, customers: list[Customer]):
     """
     print(customers)
 
-    return "OK"
+    return "OK Visits Shown"
 
 
 @router.post("/")
 def create_cart(new_cart: Customer):
     """ """
-    with db.engine.begin() as connection:
-        result = connection.execute(sqlalchemy.text("SELECT MAX(id) FROM global_inventory"))
-        max_id_row = result.fetchone()
-        if max_id_row[0] is not None and max_id_row is not None:
-            max_id = max_id_row[0]
-            cart_id = max_id + 1
-            return {"cart_id": cart_id}
-        else: 
-            return {"cart_id": 1}
+    return {"cart_id": 1}
+
+
 
 class CartItem(BaseModel):
     quantity: int
@@ -116,4 +110,4 @@ class CartCheckout(BaseModel):
 def checkout(cart_id: int, cart_checkout: CartCheckout):
     """ """
 
-    return {"total_potions_bought": 1, "total_gold_paid": 40}
+    return {"total_potions_bought": 1, "total_gold_paid": 50}

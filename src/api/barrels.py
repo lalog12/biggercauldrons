@@ -56,7 +56,7 @@ def get_wholesale_purchase_plan(wholesale_catalog: list[Barrel]):
     return [
         {
             "sku": "SMALL_GREEN_BARREL",
-            "quantity": purchase_green_barrel,
+            "quantity": purchase_green_barrel
         }
     ]
 

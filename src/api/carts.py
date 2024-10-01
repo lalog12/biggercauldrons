@@ -82,13 +82,13 @@ def post_visits(visit_id: int, customers: list[Customer]):
     """
     print(customers)
 
-    return "OK Visits Shown"
+    return {"success": True}
 
 
 @router.post("/")
 def create_cart(new_cart: Customer):
     """ """
-    return {"cart_id": 1}
+    return {"cart_id": "OK"}
 
 
 
@@ -100,7 +100,7 @@ class CartItem(BaseModel):
 def set_item_quantity(cart_id: int, item_sku: str, cart_item: CartItem):
     """ """
 
-    return "OK"
+    return {"success": True}
 
 
 class CartCheckout(BaseModel):
